@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+    font-family: "Alata", sans-serif !important;
+
+}
+
+/* navbar styles starts here */
+
+.section-title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.academics-title span:first-child {
+    display: block;
+    font-weight: bold;
+}
+
+.academics-title span:last-child {
+    display: block;
+    font-weight: bold;
+}
+
+.offcanvas {
+    display: none;
+}
+
+.navbar a {
+    font-weight: 500;
+    color: #000;
+}
+
+footer {
+    padding: 100px 0 30px 0;
+}
+
+footer ul li {
+    padding-bottom: 12px;
+}
+
+footer p {
+    padding-bottom: 10px;
+}
+
+.pagePadding {
+    padding-block: 100px;
+}
+
+@media screen and (max-width:992px) {
+    .offcanvas {
+        display: block;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:993px) {
+    .offcanvas {
+        display: none;
+    }
+}

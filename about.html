@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academic Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .whyChooseparent {
+            background-color: #fdffeb;
+            padding-block: 60px;
+        }
+
+        .whyChooseCard {
+            transition: all 0.3s linear;
+        }
+
+        .whyChooseCard {
+            border: 2px solid #000000;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            min-height: 190px;
+            margin-bottom: 55px;
+            /* background: linear-gradient(90deg,rgba(125, 155, 42, 1) 0%, rgba(199, 149, 87, 1) 50%, rgb(253, 118, 138) 100%); */
+        }
+
+        .whyChooseCard:hover {
+            transform: scale(1.04);
+           background: linear-gradient(90deg,rgb(65, 160, 197) 0%, rgba(87, 199, 133, 1) 50%, rgb(101, 237, 83) 100%);
+            color: #fff !important;
+            border:none;
+            cursor: pointer;
+        }
+
+        .about-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)),
+                url('https://media.istockphoto.com/id/1154631974/photo/graduation-cap-and-diploma-on-table-with-books.webp?a=1&b=1&s=612x612&w=0&k=20&c=V_rvszy42SVo09fRI2_gVRCOigunzFFAxwCRDApqmwY=');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            padding: 60px 0;
+        }
+
+        .about-banner h1 {
+            font-size: 3rem;
+        }
+
+        .about-banner p {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .HistoryParent-content h2 {
+            font-size: 2rem;
+        }
+
+        .HistoryParent-content p {
+            line-height: 1.6;
+        }
+
+        .accreditations-section img {
+            object-fit: contain;
+        }
+
+        .accreditations-section .card {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .pagePadding{
+            padding-block:100px;
+        }
+
+
+        @media (max-width: 768px) {
+            .about-banner h1 {
+                font-size: 2.2rem;
+            }
+
+            .about-banner p {
+                font-size: 1rem;
+            }
+            .whyChooseCard{
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-md-4">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="index.html">TRINETRA</a>
+
+            <!-- Offcanvas Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu (for mobile) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="mobileMenuLabel"><b> St. Anthony Degree College</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#academics">Academics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#admissions">Admissions</a>
+                        </li>
+
+                        <!-- Dropdown in Offcanvas -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#student-life">Student Life</a></li>
+                                <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                                <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                                <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="desktopPagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="desktopPagesDropdown">
+                            <li><a class="dropdown-item" href="#student-life">Student Life</a></li>
+                            <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                            <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                            <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="about-section">
+        <!-- Banner Section -->
+        <section class="about-banner d-flex align-items-center text-white text-center ">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold">About Us</h1>
+                        <p class="lead">Discover our journey, values, and the people shaping the future of education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History of the College -->
+        <div class="HistoryParent pagePadding" style="background-color: #fdffeb;">
+            <div class="container-lg">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="HistoryParent-image shadow rounded overflow-hidden">
+                            <img src="https://www.timeshighereducation.com/student/sites/default/files/harvard-university-campus.jpg"
+                                alt="History of the College" class="img-fluid w-100">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="HistoryParent-content p-3">
+                            <h2 class="mb-3 fw-bold ">History of the College</h2>
+                            <p class="text-muted fs-5">
+                                Founded with a vision to transform education, our college has grown from humble
+                                beginnings into a respected institution known for academic excellence, innovation, and a
+                                vibrant campus culture.
+                            </p>
+                            <p class="text-muted">
+                                Over the decades, we have empowered thousands of students to achieve their dreams
+                                through state-of-the-art facilities, dedicated faculty, and a commitment to holistic
+                                development. <br>
+                                Over the decades, we have empowered thousands of students to achieve their dreams
+                                through state-of-the-art facilities, dedicated faculty, and a commitment to holistic
+                                development. Over the decades, we have empowered thousands of students to achieve their
+                                dreams
+                                through state-of-the-art facilities, dedicated faculty, and a commitment to holistic
+                                development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision and Mission Section -->
+        <section class="vision-mission-section position-relative text-dark" style="background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);">
+            <div class="container-lg">
+                <div class="row align-items-center pagePadding">
+                    <!-- Left: Text Content -->
+                    <div class="col-lg-7 mb-4 mb-lg-0 px-5">
+                        <h2 class="fw-bold mb-3">About Us</h2>
+                        <p><strong>At St. Antony Degree College</strong>, we are committed to shaping the minds of
+                            tomorrow through excellence in education, values, and innovation. Our institution provides a
+                            nurturing environment where students are encouraged to grow intellectually, morally, and
+                            socially.</p>
+                        <p>Located in a vibrant and accessible area, St. Antony Degree College offers a wide range of
+                            undergraduate programs designed to prepare students for successful careers and meaningful
+                            lives. With experienced faculty, modern infrastructure, and a strong focus on holistic
+                            development, we strive to empower every learner to achieve their full potential.</p>
+
+                        <div class="row mt-4">
+                            <!-- Vision -->
+                            <div class="col-md-6 mb-3">
+                                <div class="info-card h-100  p-4 rounded bg-white text-center"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                    <h5 class="fw-bold text-success pb-2">Our Vision</h5>
+                                    <div class="divider mx-auto my-2"></div>
+                                    <p class="mb-0">
+                                        To be a center of academic excellence, fostering intellectual growth, ethical
+                                        leadership, and lifelong learning in a dynamic global society.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Mission -->
+                            <div class="col-md-6 mb-3">
+                                <div class="info-card h-100  p-4 rounded bg-white text-center"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                    <h5 class="fw-bold text-success pb-2">Our Mission</h5>
+                                    <div class="divider mx-auto my-2"></div>
+                                    <p class="mb-0">
+                                        To provide quality higher education that cultivates critical thinking,
+                                        professional competence, and social responsibility among students.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Image -->
+                    <div class="col-lg-5 text-center">
+                        <div class="image-box shadow rounded-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=60"
+                                alt="St. Antony Degree College Campus" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Core Principles -->
+        <div class="whyChooseparent">
+            <div class="container-lg">
+                <h2 class="text-center pb-4"><b>Core Principles</b></h2>
+                <!-- <p class="text-muted text-center mb-4">We go beyond land – we deliver vision, value, and long-term growth.</p> -->
+                <div class="row justify-content-center mt-3">
+
+                    <div class="col-md-4">
+                        <div class="whyChooseCard">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <h4 style="font-weight: 600;">Affordability</h4>
+                            <p>We ensure that every investor, big or small has access to the real estate growth story.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="whyChooseCard ">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h4>Strategic Location</h4>
+                            <p>Projects are always located near existing or upcoming residential areas, highways, and
+                                economic zones.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="whyChooseCard">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            <h4>Transparency</h4>
+                            <p>Clear titles, approved layouts, and no hidden clauses.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="whyChooseCard">
+                            <i class="fa-solid fa-users-line"></i>
+                            <h4 style="font-weight: 600;">Customer-Centricity</h4>
+                            <p>Your investment, your future - we make it our mission.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="whyChooseCard lastCard">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h4>Appreciation Guaranteed</h4>
+                            <p>We don’t just sell land, we offer <strong>future value.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Core Principles end -->
+                 <!-- Accreditations and Affiliations Section -->
+        <section class="accreditations-section text-dark" style="background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);">
+            <div class="container pagePadding">
+                <h2 class="fw-bold text-center mb-4">Accreditations and Affiliations</h2>
+                <p class="text-center mb-5">St. Antony Degree College is proud to be recognized by leading academic and
+                    regulatory bodies, ensuring the highest standards of education and institutional integrity.</p>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Example Accreditation/Affiliation 1 -->
+                    <div class="col-6 col-md-4 col-lg-3 text-center">
+                        <div class="card  border-0 p-4 rounded-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMB4aA4fI-B-JfgLhtVJV33DF5_zPRTYIu7w&s"
+                                alt="UGC" class="img-fluid mb-3" style="max-height: 80px;">
+                            <h6 class="fw-bold">UGC Approved</h6>
+                        </div>
+                    </div>
+
+                    <!-- Example Accreditation/Affiliation 2 -->
+                    <div class="col-6 col-md-4 col-lg-3 text-center">
+                        <div class="card  border-0 p-4 rounded-4">
+                            <img src="https://static.wixstatic.com/media/10b4dc_d5a0af46c0c64570a0b4bf0b133caa94~mv2.jpg/v1/fill/w_223,h_167,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Naac%20Logo.jpg"
+                                alt="NAAC" class="img-fluid mb-3" style="max-height: 80px;">
+                            <h6 class="fw-bold">NAAC Accredited</h6>
+                        </div>
+                    </div>
+
+                    <!-- Example Accreditation/Affiliation 3 -->
+                    <div class="col-6 col-md-4 col-lg-3 text-center">
+                        <div class="card  border-0 p-4 rounded-4">
+                            <img src="https://assets.thehansindia.com/h-upload/2022/08/30/1310158-aicte.webp"
+                                alt="AICTE" class="img-fluid mb-3" style="max-height: 80px;">
+                            <h6 class="fw-bold">AICTE Recognized</h6>
+                        </div>
+                    </div>
+
+                    <!-- Example Accreditation/Affiliation 4 -->
+                    <div class="col-6 col-md-4 col-lg-3 text-center">
+                        <div class="card h-100 border-0 p-4 rounded-4">
+                            <img src="https://scontent-hyd1-1.xx.fbcdn.net/v/t39.30808-1/263648519_105446018650268_3409289534705281105_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=fLESCHfkh4kQ7kNvwHXHSHC&_nc_oc=AdnSSRfbNZCy3wD6AAT-Q2R3Q1b48BJoUxMBWV9ouk6xogkfOQvT86QVt0KYGGBKsfY&_nc_zt=24&_nc_ht=scontent-hyd1-1.xx&_nc_gid=Ivlu0iMZOQLClRUFMEk6Yw&oh=00_AfIGyE4E7AJrxWRSdBFUOJkYenZ5WKvvtnPa0xYMMvh07w&oe=6834A3DD"
+                                alt="Osmania University" class="img-fluid mb-3" style="max-height: 80px;">
+                            <h6 class="fw-bold">Affiliated to Osmania University</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Messages Section -->
+        <section class="leadership-messages-section text-dark pagePadding" style="background-color: #fdffeb;">
+            <div class="container">
+                <h2 class="fw-bold text-center mb-5">Messages from the Leadership</h2>
+                <div class="row g-4">
+                    <!-- President’s Message -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100  border-0 rounded-4 p-3 text-center bg-white" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                            <h5 class=" text-success mb-2">President’s Message</h5>
+                            <div class="divider mx-auto my-2"
+                                style="width: 50px; height: 3px; background-color: #198754;"></div>
+                            <p class="mb-0">
+                                “At St. Anthony Degree College, our mission is to build a foundation of knowledge,
+                                values, and leadership in our students. We believe in nurturing talent and empowering
+                                students to rise to their full potential.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vice President’s Message -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100  border-0 rounded-4 p-3 text-center bg-white" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                            <h5 class=" text-success mb-2">Vice President’s Message</h5>
+                            <div class="divider mx-auto my-2"
+                                style="width: 50px; height: 3px; background-color: #198754;"></div>
+                            <p class="mb-0">
+                                We are dedicated to fostering academic excellence and ethical development. Our students
+                                are guided to excel in both education and character.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Secretary’s Message -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100  border-0 rounded-4 p-3 text-center bg-white" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                            <h5 class=" text-success mb-2">Secretary’s Message</h5>
+                            <div class="divider mx-auto my-2"
+                                style="width: 50px; height: 3px; background-color: #198754;"></div>
+                            <p class="mb-0">
+                                At St. Antony Degree College, we ensure transparent administration and student-centered
+                                policies to create an environment that promotes inclusive learning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Treasurer’s Message -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100  border-0 rounded-4 p-3 text-center bg-white" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                            <h5 class=" text-success mb-2">Treasurer’s Message</h5>
+                            <div class="divider mx-auto my-2"
+                                style="width: 50px; height: 3px; background-color: #198754;"></div>
+                            <p class="mb-0">
+                                We manage our resources with integrity and commitment to support quality education,
+                                infrastructure, and overall student development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Redesigned Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row gy-4 text-md-start">
+
+                <!-- About -->
+                <div class="col-md-4">
+                    <h2 class="fw-bold mb-3">T R I N E T R A</h2>
+                    <p>
+                        St. Antony Degree College is dedicated to academic excellence, character building, and holistic
+                        development. We prepare students for a successful and responsible future.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#admissions" class="text-white text-decoration-none">Admissions</a></li>
+                        <li><a href="#academics" class="text-white text-decoration-none">Academics</a></li>
+                        <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Upcoming Events</h5>
+                    <ul class="list-unstyled ">
+                        <li>📅 Career Day – June 12</li>
+                        <li>🎓 Convocation – July 20</li>
+                        <li>🏆 Annual Sports – August 15</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>123, College Road, Hyderabad</p>
+                    <p class=" mb-1"><i class="bi bi-envelope-fill me-2"></i>info@stantonycollege.edu</p>
+                    <p class=" mb-0"><i class="bi bi-telephone-fill me-2"></i>+91 98765 43210</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center border-top border-secondary mt-4 pt-3 ">
+                © 2025 St. Antony Degree College. All rights reserved. | Designed by
+                <a href="https://snaptics.agency/" target="_blank"
+                    class="text-warning text-decoration-none">Snaptics</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+
+</html>

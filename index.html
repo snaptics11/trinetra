@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academic Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carousel-item h1 {
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        @media screen and (max-width:767px) {
+            .carousel-item h1 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            .banner_image {
+                height: 400px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-md-4">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="index.html">TRINETRA</a>
+
+            <!-- Offcanvas Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu (for mobile) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="mobileMenuLabel"><b> St. Anthony Degree College</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#academics">Academics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#admissions">Admissions</a>
+                        </li>
+
+                        <!-- Dropdown in Offcanvas -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#student-life">Student Life</a></li>
+                                <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                                <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                                <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="desktopPagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="desktopPagesDropdown">
+                            <li><a class="dropdown-item" href="#student-life">Student Life</a></li>
+                            <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                            <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                            <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section as Fade Carousel -->
+    <section id="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex align-items-center justify-content-center vh-100 text-white text-center banner_image"
+                        style="background: url('https://img.freepik.com/premium-photo/fondren-science-building-southern-methodist-university-dallas-texas_261932-20650.jpg?ga=GA1.1.239247019.1747732547&semt=ais_hybrid&w=740') center center / cover no-repeat;">
+                        <div class="container">
+                            <h1 class="animate__animated animate__fadeInUp">Welcome to Academia</h1>
+                            <p class="lead">Empowering students for a brighter future</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex align-items-center justify-content-center vh-100 text-white text-center banner_image"
+                        style="background: url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1950&q=80') center center / cover no-repeat;">
+                        <div class="container">
+                            <h1 class="animate__animated animate__fadeInUp">Explore Our Programs</h1>
+                            <p class="lead">Innovative and diverse academic options</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex align-items-center justify-content-center vh-100 text-white text-center banner_image"
+                        style="background: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1950&q=80') center center / cover no-repeat;">
+                        <div class="container">
+                            <h1 class="animate__animated animate__fadeInUp">Join Our Community</h1>
+                            <p class="lead">Shape your future with us</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- News & Events Section -->
+    <section id="news-events" class="py-5 bg-light " style="background: linear-gradient(135deg, #eafff5, #eaf6ff);
+">
+        <div class="container py-5 ">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">News & Events</h2>
+                <p class="text-muted">Stay updated with the latest happenings at Academia</p>
+            </div>
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShe7PI2NNzAXrnQvojTjYxm7qM45IZIOJm2g&s"
+                            class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Science Fair 2025</h5>
+                            <p class="card-text">Our students showcased innovative projects in this year’s Science Fair.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShe7PI2NNzAXrnQvojTjYxm7qM45IZIOJm2g&s"
+                            class="card-img-top" alt="Event 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Guest Lecture: AI in Education</h5>
+                            <p class="card-text">Renowned experts spoke about the future of AI in the academic world.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShe7PI2NNzAXrnQvojTjYxm7qM45IZIOJm2g&s"
+                            class="card-img-top" alt="Event 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Sports Meet</h5>
+                            <p class="card-text">A grand celebration of sportsmanship and teamwork across all
+                                disciplines.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="pagePadding" style="background: linear-gradient(135deg, #fdffeb, #ffffff);
+">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Courses</h2>
+            <div class="row animate__animated animate__fadeInUp animate__delay-1s animate__slower" style="--animate-duration: 0.5s;">
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Science</h5>
+                        <p>Explore the world of physics, chemistry, and biology.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Arts</h5>
+                        <p>Dive into literature, history, and philosophy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Commerce</h5>
+                        <p>Learn business, accounting, and economics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Science</h5>
+                        <p>Explore the world of physics, chemistry, and biology.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Arts</h5>
+                        <p>Dive into literature, history, and philosophy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Commerce</h5>
+                        <p>Learn business, accounting, and economics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Science</h5>
+                        <p>Explore the world of physics, chemistry, and biology.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Arts</h5>
+                        <p>Dive into literature, history, and philosophy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3">
+                        <h5>Commerce</h5>
+                        <p>Learn business, accounting, and economics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Announcements -->
+    <section
+        style="background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);">
+        <div class="container pagePadding">
+            <h2 class="text-center mb-4 fw-bold pb-4">Featured Announcements</h2>
+
+            <div id="announcementCarousel " class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Announcement 1</h5>
+                                        <p class="card-text">Enrollment for Fall 2025 starts now! Early registration
+                                            benefits apply.</p>
+                                        <small class="text-muted">May 10, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Announcement 2</h5>
+                                        <p class="card-text">New research papers are now available in our digital
+                                            library archive.</p>
+                                        <small class="text-muted">May 11, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Announcement 3</h5>
+                                        <p class="card-text">Guest seminar by Dr. Kavita Mehra on AI and ethics
+                                            scheduled next week.</p>
+                                        <small class="text-muted">May 12, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Announcement 4</h5>
+                                        <p class="card-text">Campus Wi-Fi upgrade completed. Enjoy faster speeds in all
+                                            zones.</p>
+                                        <small class="text-muted">May 13, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Announcement 5</h5>
+                                        <p class="card-text">Volunteer opportunities open for the upcoming cultural
+                                            fest.</p>
+                                        <small class="text-muted">May 14, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Announcement 6</h5>
+                                        <p class="card-text">Volunteer opportunities open for the upcoming cultural
+                                            fest.</p>
+                                        <small class="text-muted">May 14, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Optional empty slot to balance layout -->
+                            <div class="col-md-4 d-none d-md-block"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#announcementCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#announcementCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" style="background: linear-gradient(135deg, #eafff5, #eaf6ff);
+">
+        <div class="container py-4">
+            <h2 class="text-center mb-5 fw-bold">Get in Touch</h2>
+            <div class="row g-4 align-items-center">
+
+                <!-- Contact Info -->
+                <div class="col-md-6">
+                    <div class="p-4 rounded shadow-sm bg-white h-100">
+                        <h4 class="mb-4">Contact Information</h4>
+                        <div class="mb-4 d-flex align-items-start">
+                            <i class="bi bi-geo-alt-fill fs-4  me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Address</h6>
+                                <p class="mb-0">123 Education Lane, Knowledge City, EDU 45678 123 <br> Education Lane,
+                                    Knowledge City, EDU 45678 123 <br> Education Lane, Knowledge City, EDU 45678</p>
+                            </div>
+                        </div>
+                        <div class="mb-4 d-flex align-items-start">
+                            <i class="bi bi-telephone-fill fs-4  me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Phone</h6>
+                                <p class="mb-0"><a href="tel:+1234567890" class="text-decoration-none text-dark">+1
+                                        (234) 567-890</a></p>
+                            </div>
+                        </div>
+                        <div class="mb-4 d-flex align-items-start">
+                            <i class="bi bi-envelope-fill fs-4  me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Email</h6>
+                                <p class="mb-0"><a href="mailto:info@academia.edu"
+                                        class="text-decoration-none text-dark">info@academia.edu</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start pb-2">
+                            <i class="bi bi-clock-fill fs-4  me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Office Hours</h6>
+                                <p class="mb-0">Mon - Fri: 9:00 AM – 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <div class="p-4 rounded shadow-sm bg-white">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="phone" class="form-control" placeholder="Phone Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Redesigned Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row gy-4 text-md-start">
+
+                <!-- About -->
+                <div class="col-md-4">
+                    <h2 class="fw-bold mb-3">T R I N E T R A</h2>
+                    <p class="">
+                        St. Antony Degree College is dedicated to academic excellence, character building, and holistic
+                        development. We prepare students for a successful and responsible future.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#admissions" class="text-white text-decoration-none">Admissions</a></li>
+                        <li><a href="#academics" class="text-white text-decoration-none">Academics</a></li>
+                        <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Upcoming Events</h5>
+                    <ul class="list-unstyled ">
+                        <li>📅 Career Day – June 12</li>
+                        <li>🎓 Convocation – July 20</li>
+                        <li>🏆 Annual Sports – August 15</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>123, College Road, Hyderabad</p>
+                    <p class=" mb-1"><i class="bi bi-envelope-fill me-2"></i>info@stantonycollege.edu</p>
+                    <p class=" mb-0"><i class="bi bi-telephone-fill me-2"></i>+91 98765 43210</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center border-top border-secondary mt-4 pt-3 ">
+                © 2025 St. Antony Degree College. All rights reserved. | Designed by
+                <a href="https://snaptics.agency/" target="_blank"
+                    class="text-warning text-decoration-none">Snaptics</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carouselElement = document.querySelector('#heroCarousel');
+        const carouselInstance = new bootstrap.Carousel(carouselElement); // Manually initialize
+
+        let startX = 0;
+        let endX = 0;
+
+        carouselElement.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+        });
+
+        carouselElement.addEventListener('touchmove', function (e) {
+            endX = e.touches[0].clientX;
+        });
+
+        carouselElement.addEventListener('touchend', function () {
+            if (startX - endX > 50) {
+                carouselInstance.next(); // Swipe left
+            } else if (endX - startX > 50) {
+                carouselInstance.prev(); // Swipe right
+            }
+        });
+    });
+</script> -->
+
+
+    <!-- Carousel Auto-slide Script -->
+    <script>
+        const carousel = document.querySelector('#announcementCarousel');
+        const bootstrapCarousel = new bootstrap.Carousel(carousel, {
+            interval: 4000, // Change every 4 seconds
+            ride: 'carousel',
+            pause: false,   // keep autoplay even when hovered
+            wrap: true
+        });
+    </script>
+
+
+</body>
+
+</html>
