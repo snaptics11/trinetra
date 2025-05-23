@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academic Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contactBanner {
+            height: 350px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contactBanner img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .contactBanner h1 {
+            position: absolute;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 3px;
+        }
+
+        .admissions-section {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .admissions-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .admissions-section p {
+            color: #555;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-md-4">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="index.html">TRINETRA</a>
+
+            <!-- Offcanvas Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu (for mobile) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="mobileMenuLabel"><b> St. Anthony Degree College</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Academics.html">Academics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admissions.html">Admissions</a>
+                        </li>
+
+                        <!-- Dropdown in Offcanvas -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
+                                <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                                <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                                <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="desktopPagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="desktopPagesDropdown">
+                            <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
+                            <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                            <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                            <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contactBanner">
+        <img src="https://ecovalet.uk/wp-content/uploads/2023/06/nextcontact-1.png" alt="">
+        <h1>Admissions</h1>
+    </div>
+
+
+
+    <div class=" admissions-page" style="    background-color: #fdffeb;">
+       
+
+        <!-- Admission Process - Timeline Design -->
+        <section class="container-lg pagePadding">
+            
+            <h2 class="section-title mb-4 fw-bold">Admission Process</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Application</h3>
+                        <p>Complete our online application form with your personal and academic details</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Start Application</a>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Document Submission</h3>
+                        <p>Upload required documents including transcripts, ID proof, and recommendation letters</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Entrance Interview</h3>
+                        <p>Participate in our comprehensive interview with the academic committee</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Admission Decision</h3>
+                        <p>Receive your admission result within 2 weeks of your interview</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eligibility Criteria - Card with Icons -->
+        <section class="eligibility-section  pagePadding" style="background: linear-gradient(90deg, rgb(65, 160, 197) 0%, rgba(87, 199, 133, 1) 50%, rgb(101, 237, 83) 100%);">
+            <h2 class="section-title mb-5 text-center fw-bold">Eligibility Criteria</h2>
+            <div class="row container-lg mx-auto">
+                <div class="col-md-6">
+                    <div class="eligibility-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="fw-bold">Undergraduate Programs</h3>
+                            <ul class="mt-3">
+                                <li>Completed higher secondary education (10+2)</li>
+                                <li>Minimum 60% marks in relevant subjects</li>
+                                <li>Valid entrance exam scores (if applicable)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="eligibility-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="fw-bold">Postgraduate Programs</h3>
+                            <ul class="mt-3">
+                                <li>Bachelor's degree in relevant field</li>
+                                <li>Minimum 3.0 GPA or equivalent</li>
+                                <li>Letters of recommendation</li>
+                                <li>Statement of purpose</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fee Structure - Tabbed Interface -->
+    <section class="fee-section mb-5 container-lg py-5">
+    <h2 class="section-title mb-4 fw-bold">Fee Structure</h2>
+    <div class="fee-tabs">
+        <ul class="nav nav-tabs" id="feeTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="undergrad-tab" data-bs-toggle="tab"
+                    data-bs-target="#undergrad" type="button" role="tab">Undergraduate</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="grad-tab" data-bs-toggle="tab"
+                    data-bs-target="#grad" type="button" role="tab">Graduate</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="phd-tab" data-bs-toggle="tab"
+                    data-bs-target="#phd" type="button" role="tab">PhD</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="feeTabContent">
+            <div class="tab-pane fade show active text-center" id="undergrad" role="tabpanel">
+                <a href="downloads/undergraduate-fee.pdf" class="btn btn-outline-primary mt-4" download>
+                    Download Undergraduate Fee Structure
+                </a>
+            </div>
+            <div class="tab-pane fade text-center" id="grad" role="tabpanel">
+                <a href="downloads/graduate-fee.pdf" class="btn btn-outline-success mt-4" download>
+                    Download Graduate Fee Structure
+                </a>
+            </div>
+            <div class="tab-pane fade text-center" id="phd" role="tabpanel">
+                <a href="downloads/phd-fee.pdf" class="btn btn-outline-warning mt-4" download>
+                    Download PhD Fee Structure
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Scholarships - Accordion -->
+        <section class="scholarship-section mb-5">
+            <h2 class="section-title mb-4 container-lg fw-bold">Scholarships & Financial Aid</h2>
+            <div class="accordion container-lg" id="scholarshipAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            Merit-Based Scholarships
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Awarded to students with outstanding academic records. Covers up to 100% of tuition fees
+                                based on entrance exam scores and previous academic performance.</p>
+                            <ul>
+                                <li>Presidential Scholarship: Full tuition waiver</li>
+                                <li>Dean's Scholarship: 50% tuition waiver</li>
+                                <li>Honors Scholarship: 25% tuition waiver</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo">
+                            Need-Based Financial Aid
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Financial assistance for students from economically disadvantaged backgrounds. Requires
+                                submission of family income documents.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- More accordion items -->
+            </div>
+        </section>
+
+        <!-- Prospectus Download - Call to Action -->
+        <section class="prospectus-section text-center py-5">
+            <h2 class="section-title mb-3 fw-bold text-white">Explore Our Programs</h2>
+            <p class="mb-4">Download our comprehensive prospectus to learn more about our courses, faculty, facilities,
+                and student life.</p>
+            <a href="#" class="btn btn-lg btn-primary">
+                <i class="fas fa-download me-2"></i> Download Prospectus
+            </a>
+            <div class="mt-3">
+                <a href="#" class="btn btn-outline-secondary text-white">
+                    <i class="fas fa-envelope me-2 "></i> Request Information Packet
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .admissions-page {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+
+        /* Process Timeline Styles */
+        .process-timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .process-timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 25px;
+            width: 2px;
+            background: #e0e0e0;
+        }
+
+        .process-step {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: -50px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Eligibility Card Styles */
+        .eligibility-card {
+            display: flex;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-right: 20px;
+        }
+
+        /* Fee Table Styles */
+        .fee-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .table-header {
+            display: flex;
+            background: #2c3e50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header-item,
+        .table-cell {
+            flex: 1;
+            padding: 12px 15px;
+        }
+
+        .table-row {
+            display: flex;
+            border-bottom: 1px solid #eee;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        /* Prospectus Section */
+        .prospectus-section {
+          background: linear-gradient(90deg, rgb(65, 160, 197) 0%, rgba(87, 199, 133, 1) 50%, rgb(101, 237, 83) 100%);
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+
+        .btn-outline-primary {
+            color: #3498db;
+            border-color: #3498db;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+    <!-- Redesigned Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row gy-4 text-md-start">
+
+                <!-- About -->
+                <div class="col-md-4">
+                    <h2 class="fw-bold mb-3">T R I N E T R A</h2>
+                    <p class="">
+                        St. Antony Degree College is dedicated to academic excellence, character building, and holistic
+                        development. We prepare students for a successful and responsible future.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="admissions.html" class="text-white text-decoration-none">Admissions</a></li>
+                        <li><a href="Academics.html" class="text-white text-decoration-none">Academics</a></li>
+                        <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Upcoming Events</h5>
+                    <ul class="list-unstyled ">
+                        <li>📅 Career Day – June 12</li>
+                        <li>🎓 Convocation – July 20</li>
+                        <li>🏆 Annual Sports – August 15</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>123, College Road, Hyderabad</p>
+                    <p class=" mb-1"><i class="bi bi-envelope-fill me-2"></i>info@stantonycollege.edu</p>
+                    <p class=" mb-0"><i class="bi bi-telephone-fill me-2"></i>+91 98765 43210</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center border-top border-secondary mt-4 pt-3 ">
+                © 2025 St. Antony Degree College. All rights reserved. | Designed by
+                <a href="https://snaptics.agency/" target="_blank"
+                    class="text-warning text-decoration-none">Snaptics</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+
+</html>
