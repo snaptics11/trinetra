@@ -447,7 +447,9 @@ footer p {
 .quickLinks .card:hover {
     transform: scale(1.05);
 }
-
+a.navbar-brand.fw-bold {
+    font-size: 30px;
+}
 @media screen and (max-width:768px) {
     .pagePadding {
         padding-block: 40px;
