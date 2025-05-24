@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academic Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quote-icon {
+            font-size: 4rem;
+            color: #dcdcdc;
+            position: absolute;
+            top: -10px;
+            left: -30px;
+        }
+
+        .recruiters img {
+            max-height: 60px;
+            object-fit: contain;
+            /* filter: grayscale(100%); */
+            transition: 0.3s;
+            margin: 20px;
+        }
+
+        .recruiters img:hover {
+            filter: none;
+        }
+
+        .counter {
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            font-size: 48px;
+        }
+
+        .placementStats h2 {
+            font-size: 50px;
+            padding-bottom: 40px;
+        }
+
+        .placementStats p {
+            font-size: 20px;
+        }
+
+        .InternshipOpportunities .card-body {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width:767px) {
+            .placementStats h2 {
+                font-size: 30px;
+                padding-bottom: 40px;
+            }
+
+            .placementStats p {
+                font-size: 20px;
+            }
+
+            .counter {
+
+                font-size: 36px;
+            }
+
+            .recruiters img {
+
+                margin: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-md-4">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="index.html">TRINETRA</a>
+
+            <!-- Offcanvas Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu (for mobile) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="mobileMenuLabel"><b> St. Anthony Degree College</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Academics.html">Academics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admissions.html">Admissions</a>
+                        </li>
+
+                        <!-- Dropdown in Offcanvas -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
+                                <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                                <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                                <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="desktopPagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="desktopPagesDropdown">
+                            <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
+                            <li><a class="dropdown-item" href="#placements">Placements</a></li>
+                            <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
+                            <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contactBanner">
+        <img src="https://images.sw.cdn.siemens.com/siemens-disw-assets/public/7x85Fa0whDvfMlnsHmEFVM/en-US/careers-is677807458-gradient-hero-1920x1080.jpg?auto=format,compress&w=1920&q=60"
+            alt="">
+        <h1>Placements</h1>
+    </div>
+    <!-- Career Guidance Cell Section -->
+    <section class="pagePadding" style="background-color: #fdffeb;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://img.freepik.com/premium-photo/black-woman-business-leadership-success-portrait-with-career-mindset-job-goals-target-workplace-vision-mission-mockup-with-corporate-worker-happy-arms-crossed-office_590464-139959.jpg?semt=ais_hybrid&w=740"
+                        alt="Career Guidance" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 p-md-5">
+                    <h2 class="fw-bold mb-3">Career Guidance Cell</h2>
+                    <p class="text-muted">
+                        Our Career Guidance Cell is dedicated to helping students unlock their full potential by
+                        offering expert career counseling, resume building workshops, aptitude training, and
+                        personalized mentorship sessions.
+                        It acts as a bridge between students and the professional world, ensuring they are fully
+                        equipped to face industry challenges and make informed career decisions.
+                        The cell consistently organizes sessions to improve communication skills, boost self-confidence,
+                        and prepare students for both on-campus and off-campus opportunities.
+                    </p>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> One-on-one mentoring sessions</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Mock interviews and aptitude tests
+                        </li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Guidance from industry
+                            professionals</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Resume and LinkedIn profile
+                            enhancement</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Support for higher education and
+                            competitive exams</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Recruiters Section -->
+    <section class="bg-light py-5"
+        style="background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);">
+        <div class="container text-center">
+            <h1 class="mb-5 fw-bold text-white">Our Recruiters</h1>
+            <div class="row g-4 recruiters justify-content-center">
+                <div class="col-4 col-md-2"><img
+                        src="https://banner2.cleanpng.com/lnd/20250118/bt/533fb9570517508a96ae44ae23f5d5.webp"
+                        class="img-fluid" alt="TCS"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD5Ts3tQWiOFKx84woAx1T4T6E8CJCnSVbj0L-XHoZ6Jwa6zYe3rBvTLETMQwAX3JQiEw&usqp=CAU"
+                        class="img-fluid" alt="Amazon"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.clipartmax.com/png/middle/337-3375319_top-recruiters-logos-of-software-companies.png"
+                        class="img-fluid" alt="Infosys"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrmHhFE4hRRfTZcaSR1iFkMPFpMVMcE_Xzmg&s"
+                        class="img-fluid" alt="Microsoft"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.pngfind.com/pngs/m/489-4899679_capgemini-logo-2018-capgemini-logo-png-transparent-png.png"
+                        class="img-fluid" alt="capgemini"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://banner2.cleanpng.com/lnd/20250118/bt/533fb9570517508a96ae44ae23f5d5.webp"
+                        class="img-fluid" alt="TCS"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD5Ts3tQWiOFKx84woAx1T4T6E8CJCnSVbj0L-XHoZ6Jwa6zYe3rBvTLETMQwAX3JQiEw&usqp=CAU"
+                        class="img-fluid" alt="Amazon"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.clipartmax.com/png/middle/337-3375319_top-recruiters-logos-of-software-companies.png"
+                        class="img-fluid" alt="Infosys"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrmHhFE4hRRfTZcaSR1iFkMPFpMVMcE_Xzmg&s"
+                        class="img-fluid" alt="Microsoft"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.pngfind.com/pngs/m/489-4899679_capgemini-logo-2018-capgemini-logo-png-transparent-png.png"
+                        class="img-fluid" alt="capgemini"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://banner2.cleanpng.com/lnd/20250118/bt/533fb9570517508a96ae44ae23f5d5.webp"
+                        class="img-fluid" alt="TCS"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD5Ts3tQWiOFKx84woAx1T4T6E8CJCnSVbj0L-XHoZ6Jwa6zYe3rBvTLETMQwAX3JQiEw&usqp=CAU"
+                        class="img-fluid" alt="Amazon"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.clipartmax.com/png/middle/337-3375319_top-recruiters-logos-of-software-companies.png"
+                        class="img-fluid" alt="Infosys"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrmHhFE4hRRfTZcaSR1iFkMPFpMVMcE_Xzmg&s"
+                        class="img-fluid" alt="Microsoft"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.pngfind.com/pngs/m/489-4899679_capgemini-logo-2018-capgemini-logo-png-transparent-png.png"
+                        class="img-fluid" alt="capgemini"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://banner2.cleanpng.com/lnd/20250118/bt/533fb9570517508a96ae44ae23f5d5.webp"
+                        class="img-fluid" alt="TCS"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD5Ts3tQWiOFKx84woAx1T4T6E8CJCnSVbj0L-XHoZ6Jwa6zYe3rBvTLETMQwAX3JQiEw&usqp=CAU"
+                        class="img-fluid" alt="Amazon"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.clipartmax.com/png/middle/337-3375319_top-recruiters-logos-of-software-companies.png"
+                        class="img-fluid" alt="Infosys"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrmHhFE4hRRfTZcaSR1iFkMPFpMVMcE_Xzmg&s"
+                        class="img-fluid" alt="Microsoft"></div>
+                <div class="col-4 col-md-2"><img
+                        src="https://www.pngfind.com/pngs/m/489-4899679_capgemini-logo-2018-capgemini-logo-png-transparent-png.png"
+                        class="img-fluid" alt="capgemini"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Placement Stats -->
+    <section class="py-5 placementStats text-center" style="background-color: #fdffeb;">
+        <div class="container">
+            <h2 class="fw-bold">Placement Highlights</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h3 class="text-primary counter" data-target="90">0%</h3>
+                    <p>Placement Rate</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-primary counter" data-target="100">0+</h3>
+                    <p>Companies Visited</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-primary counter" data-target="5">0 LPA</h3>
+                    <p>Average Package</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-primary counter" data-target="12">0 LPA</h3>
+                    <p>Highest Package</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Internship Opportunities Section -->
+    <section class="pagePadding InternshipOpportunities" style="background: linear-gradient(135deg, #eafff5, #eaf6ff);">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="fw-bold mb-4">Internship Opportunities</h1>
+                    <p class="text-muted">We bridge the gap between academia and the corporate world by offering a wide
+                        range of internship opportunities to our students.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Tech Internships</h5>
+                            <p class="card-text text-muted">Opportunities with leading tech firms in software
+                                development, AI, data science, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Business & Marketing</h5>
+                            <p class="card-text text-muted">Intern with top brands in digital marketing, business
+                                analytics, and management roles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">NGO & Social Impact</h5>
+                            <p class="card-text text-muted">Get involved in real-world impact projects with NGOs and
+                                social innovation labs.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">NGO & Social Impact</h5>
+                            <p class="card-text text-muted">Get involved in real-world impact projects with NGOs and
+                                social innovation labs.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">NGO & Social Impact</h5>
+                            <p class="card-text text-muted">Get involved in real-world impact projects with NGOs and
+                                social innovation labs.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">NGO & Social Impact</h5>
+                            <p class="card-text text-muted">Get involved in real-world impact projects with NGOs and
+                                social innovation labs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="text-center mt-4">
+      <a href="#" class="btn btn-outline-primary">See Available Internships</a>
+    </div> -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+
+
+    <section class="testimonial text-center">
+        <div class="container">
+
+            <div class="heading white-heading">
+                T e s t i m o n i a l s
+            </div>
+            <div id="testimonial4"
+                class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
+                data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>At St. Anthony Degree College, our mission is to build a foundation of knowledge, values,
+                                and leadership in our students. We believe in nurturing talent and empowering students
+                                to rise to their full potential.</p>
+                            <h4>President</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>At St. Anthony Degree College, our mission is to build a foundation of knowledge, values,
+                                and leadership in our students. We believe in nurturing talent and empowering students
+                                to rise to their full potential.</p>
+                            <h4>President</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>At St. Anthony Degree College, our mission is to build a foundation of knowledge, values,
+                                and leadership in our students. We believe in nurturing talent and empowering students
+                                to rise to their full potential.</p>
+                            <h4>President</h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-white text-center py-5"
+        style="background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);">
+        <div class="container">
+            <h1 class="pb-2">Ready to be part of our success story?</h1>
+            <p class="mb-4">Join St. Anthony Degree College today and unlock your potential.</p>
+            <a href="#apply" class="btn btn-dark btn-lg">Apply Now</a>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Redesigned Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row gy-4 text-md-start">
+
+                <!-- About -->
+                <div class="col-md-4">
+                    <h2 class="fw-bold mb-3">T R I N E T R A</h2>
+                    <p class="">
+                        St. Antony Degree College is dedicated to academic excellence, character building, and holistic
+                        development. We prepare students for a successful and responsible future.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="admissions.html" class="text-white text-decoration-none">Admissions</a></li>
+                        <li><a href="Academics.html" class="text-white text-decoration-none">Academics</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Upcoming Events</h5>
+                    <ul class="list-unstyled ">
+                        <li>📅 Career Day – June 12</li>
+                        <li>🎓 Convocation – July 20</li>
+                        <li>🏆 Annual Sports – August 15</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                                        <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>6-297/1/2, Opp Super Theater, RCI Road, Balapur X Road, Hyderabad - 500097, Telangana, India.</p>
+
+                    <p class=" mb-1"><i class="bi bi-envelope-fill me-2"></i>info@stantonycollege.edu</p>
+                      <p class="mb-0">
+  <i class="bi bi-telephone-fill me-2"></i>
+  <a href="tel:+91891947562" class="text-decoration-none text-reset">+91-891947562</a>
+</p>
+
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center border-top border-secondary mt-4 pt-3 ">
+                © 2025 St. Antony Degree College. All rights reserved. | Designed by
+                <a href="https://snaptics.agency/" target="_blank"
+                    class="text-warning text-decoration-none">Snaptics</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#testimonial4').carousel({
+                interval: 5000,
+                ride: 'carousel'
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".counter");
+
+            const speed = 200; // smaller is faster
+
+            const animateCounter = counter => {
+                const target = +counter.getAttribute("data-target");
+                const isLPA = counter.textContent.includes("LPA");
+                const isPercent = counter.textContent.includes("%");
+                const isPlus = counter.textContent.includes("+");
+
+                const updateCount = () => {
+                    const current = +counter.innerText.replace(/\D/g, '');
+                    const increment = Math.ceil(target / speed);
+
+                    if (current < target) {
+                        counter.innerText = `${current + increment}${isPercent ? "%" : isPlus ? "+" : isLPA ? " LPA" : ""}`;
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = `${target}${isPercent ? "%" : isPlus ? "+" : isLPA ? " LPA" : ""}`;
+                    }
+                };
+
+                updateCount();
+            };
+
+            // Optional: trigger only when in view
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.6 });
+
+            counters.forEach(counter => observer.observe(counter));
+        });
+    </script>
+
+
+</body>
+
+</html>

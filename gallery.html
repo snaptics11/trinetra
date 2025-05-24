@@ -7,7 +7,7 @@
     <title>Academic Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-        <!-- popup style link  -->
+    <!-- popup style link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.css"
         integrity="sha512-UhvuUthI9VM4N3ZJ5o1lZgj2zNtANzr3zyucuZZDy67BO6Ep5+rJN2PST7kPj+fOI7M/7wVeYaSaaAICmIQ4sQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,11 +19,11 @@
 
     <style>
         .GalleryBanner {
-            height: 150px;
+            height: 180px;
             display: flex;
             justify-content: center;
             align-items: center;
-               background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+            background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
             color: #ffffff;
             font-weight: 600;
             text-transform: uppercase;
@@ -46,7 +46,7 @@
         @media (min-width: 1300px) {
             .popup-gallery {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
             }
         }
@@ -228,7 +228,7 @@
 
 
     <!-- gallery section  -->
-    <div class="gallery_container pagePadding">
+    <div class="gallery_container py-5">
         <div class="popup-gallery">
             <div class="gallery_item">
                 <a class="hover_affect_nlf position-relative"
@@ -273,22 +273,7 @@
                     </span>
                 </a>
             </div>
-            <div class="gallery_item">
-                <a class="hover_affect_nlf position-relative"
-                    href="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
-                    title="Image 4">
-                    <img src="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
-                        alt="Thumbnail 1">
-                    <span class="singicon_btn_nlf">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
-                        </svg>
-                    </span>
-                </a>
-            </div>
-              <div class="gallery_item">
+               <div class="gallery_item">
                 <a class="hover_affect_nlf position-relative"
                     href="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
                     title="Image 1">
@@ -331,6 +316,13 @@
                     </span>
                 </a>
             </div>
+        </div>
+    </div>
+
+    <div class="gallery_container pb-5">
+        <h1 class="text-center fw-bold mb-5">Event Heighlights</h1>
+        <div class="popup-gallery">
+
             <div class="gallery_item">
                 <a class="hover_affect_nlf position-relative"
                     href="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
@@ -346,7 +338,35 @@
                     </span>
                 </a>
             </div>
-              <div class="gallery_item">
+            <div class="gallery_item">
+                <a class="hover_affect_nlf position-relative"
+                    href="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
+                    title="Image 1">
+                    <img src="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
+                        alt="Thumbnail 1">
+                    <span class="singicon_btn_nlf">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="gallery_item">
+                <a class="hover_affect_nlf position-relative"
+                    href="https://cdn.pixabay.com/photo/2020/01/30/17/49/book-4806076_1280.jpg" title="Image 2">
+                    <img src="https://cdn.pixabay.com/photo/2020/01/30/17/49/book-4806076_1280.jpg" alt="Thumbnail 1">
+                    <span class="singicon_btn_nlf">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+               <div class="gallery_item">
                 <a class="hover_affect_nlf position-relative"
                     href="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
                     title="Image 1">
@@ -389,12 +409,46 @@
                     </span>
                 </a>
             </div>
+        </div>
+    </div>
+       <div class="gallery_container pb-5">
+        <h1 class="text-center fw-bold mb-5">Media Mentions</h1>
+        <div class="popup-gallery">
+
             <div class="gallery_item">
                 <a class="hover_affect_nlf position-relative"
                     href="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
                     title="Image 4">
                     <img src="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
                         alt="Thumbnail 1">
+                    <span class="singicon_btn_nlf">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="gallery_item">
+                <a class="hover_affect_nlf position-relative"
+                    href="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
+                    title="Image 1">
+                    <img src="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
+                        alt="Thumbnail 1">
+                    <span class="singicon_btn_nlf">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="gallery_item">
+                <a class="hover_affect_nlf position-relative"
+                    href="https://cdn.pixabay.com/photo/2020/01/30/17/49/book-4806076_1280.jpg" title="Image 2">
+                    <img src="https://cdn.pixabay.com/photo/2020/01/30/17/49/book-4806076_1280.jpg" alt="Thumbnail 1">
                     <span class="singicon_btn_nlf">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                             class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -437,10 +491,10 @@
                 <div class="col-md-2">
                     <h5 class="fw-bold mb-3">Quick Links</h5>
                     <ul class="list-unstyled ">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
                         <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
                         <li><a href="admissions.html" class="text-white text-decoration-none">Admissions</a></li>
                         <li><a href="Academics.html" class="text-white text-decoration-none">Academics</a></li>
-                        <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
                         <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
@@ -458,9 +512,14 @@
                 <!-- Contact Info -->
                 <div class="col-md-3">
                     <h5 class="fw-bold mb-3">Contact</h5>
-                    <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>123, College Road, Hyderabad</p>
+                                        <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>6-297/1/2, Opp Super Theater, RCI Road, Balapur X Road, Hyderabad - 500097, Telangana, India.</p>
+
                     <p class=" mb-1"><i class="bi bi-envelope-fill me-2"></i>info@stantonycollege.edu</p>
-                    <p class=" mb-0"><i class="bi bi-telephone-fill me-2"></i>+91 98765 43210</p>
+                      <p class="mb-0">
+  <i class="bi bi-telephone-fill me-2"></i>
+  <a href="tel:+91891947562" class="text-decoration-none text-reset">+91-891947562</a>
+</p>
+
                 </div>
             </div>
 
