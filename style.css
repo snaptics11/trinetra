@@ -452,9 +452,11 @@ a.navbar-brand.fw-bold {
 }
 @media screen and (max-width:768px) {
     .pagePadding {
-        padding-block: 40px;
+        padding-block: 40px !important;
     }
-
+.HistoryParent-content h2 {
+    font-size: 28px;
+}
     .section-title {
         font-size: 1.5rem;
     }
