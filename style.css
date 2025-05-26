@@ -497,6 +497,25 @@ footer .fs-5 {
     }
 }
 
+@media screen and (min-width:769px) and (max-width:992px) {
+    .HistoryParent .row {
+        flex-direction: column;
+    }
+
+    #campus-facilities .row {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .counter {
+        font-size: 38px !important;
+    }
+    .careerGuidanceCell .row{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 @media screen and (min-width:992px) and (max-width:993px) {
     .offcanvas {
         display: none;
