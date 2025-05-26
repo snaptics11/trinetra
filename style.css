@@ -420,6 +420,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .contactBanner img {
@@ -436,9 +437,6 @@ footer p {
     font-size: 52px;
 }
 
-.section {
-    color: white;
-}
 
 .quickLinks .card {
     transition: all 0.3s linear;
@@ -450,6 +448,7 @@ footer p {
 a.navbar-brand.fw-bold {
     font-size: 30px;
 }
+
 @media screen and (max-width:768px) {
     .pagePadding {
         padding-block: 40px !important;

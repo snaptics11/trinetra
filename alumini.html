@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Network</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.2;
+        }
+
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .card-alumni {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        .card-alumni:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: all 0.3s ease;
+            margin-bottom:25px;
+            min-height:270px;
+        }
+         .feature-box p{
+            margin-bottom: 0;
+         }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Animation delays */
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-md-4">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="index.html">TRINETRA</a>
+
+            <!-- Offcanvas Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu (for mobile) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="mobileMenuLabel"><b> St. Anthony Degree College</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Academics.html">Academics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admissions.html">Admissions</a>
+                        </li>
+
+                        <!-- Dropdown in Offcanvas -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
+                                <li><a class="dropdown-item" href="placements.html">Placements</a></li>
+                                <li><a class="dropdown-item" href="research.html">Research & Innovation</a></li>
+                                <li><a class="dropdown-item" href="alumini.html">Alumni</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="desktopPagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="desktopPagesDropdown">
+                            <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
+                            <li><a class="dropdown-item" href="placements.html">Placements</a></li>
+                            <li><a class="dropdown-item" href="research.html">Research & Innovation</a></li>
+                            <li><a class="dropdown-item" href="alumini.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center position-relative">
+            <h1 class="hero-title animate__animated animate__fadeInDown">Welcome to Our Alumni Community</h1>
+            <p class="hero-subtitle animate__animated animate__fadeInDown animate-delay-1">Connecting past, present, and
+                future generations</p>
+        </div>
+    </section>
+
+
+
+    <!-- Alumni Success Stories Section -->
+    <section class="pagePadding"  style="background-color: #fdffeb;">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Alumni Success Stories</h2>
+            <div class="row">
+                <div class="col-md-4 animate__animated animate__fadeInUp animate-delay-1">
+                    <div class="card card-alumni">
+                        <img src="https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.jpg?s=612x612&w=0&k=20&c=NJSugBzNuZqb7DJ8ZgLfYKb3qPr2EJMvKZ21Sj5Sfq4="
+                            class="card-img-top" alt="Alumni 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sarah Johnson</h5>
+                            <p class="card-text">Class of 2010, now CEO of Tech Innovations Inc. Sarah credits her
+                                success to the strong foundation built during her time at our institution.</p>
+                            <a href="#" class="btn btn-primary">Read Story</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp animate-delay-2">
+                    <div class="card card-alumni">
+                        <img src="https://media.istockphoto.com/id/955158514/photo/confident-ceo-talking-about-company-success-strategy.jpg?s=612x612&w=0&k=20&c=V5uNpcECrfY8jazEaelq6DVHPoRx4M67-tYbiV-RKK8="
+                            class="card-img-top" alt="Alumni 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Michael Chen</h5>
+                            <p class="card-text">Class of 2015, award-winning researcher in renewable energy. Michael
+                                maintains close ties with our engineering department.</p>
+                            <a href="#" class="btn btn-primary">Read Story</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp animate-delay-3">
+                    <div class="card card-alumni">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/048/378/888/small_2x/a-young-happy-pretty-smiling-professional-business-woman-free-photo.jpg"
+                            class="card-img-top" alt="Alumni 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Jessica Williams</h5>
+                            <p class="card-text">Class of 2018, founder of a nonprofit organization helping
+                                underprivileged youth access quality education.</p>
+                            <a href="#" class="btn btn-primary">Read Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="text-center mt-4 animate__animated animate__fadeIn animate-delay-3">
+                <a href="#" class="btn btn-outline-primary">View All Stories</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Alumni Events Section -->
+    <section class="pagePadding" style="    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Alumni Events</h2>
+            <div class="row">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <div class="card card-alumni mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    class="img-fluid rounded-start h-100" alt="Event 1">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Annual Homecoming</h5>
+                                    <p class="card-text"><small class="text-muted"><i
+                                                class="far fa-calendar-alt me-2"></i>October 15-17, 2023</small></p>
+                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, dolorem!</p>
+                                    <a href="#" class="btn btn-sm btn-primary">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="card card-alumni mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    class="img-fluid rounded-start h-100" alt="Event 2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Career Networking Night</h5>
+                                    <p class="card-text"><small class="text-muted"><i
+                                                class="far fa-calendar-alt me-2"></i>November 8, 2023</small></p>
+                                    <p class="card-text">Connect with fellow alumni and explore career opportunities
+                                        across various industries.</p>
+                                    <a href="#" class="btn btn-sm btn-primary">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <div class="card card-alumni mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80"
+                                    class="img-fluid rounded-start h-100" alt="Event 3">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Leadership Symposium</h5>
+                                    <p class="card-text"><small class="text-muted"><i
+                                                class="far fa-calendar-alt me-2"></i>December 5, 2023</small></p>
+                                    <p class="card-text">Learn from distinguished alumni leaders about navigating
+                                        challenges and driving innovation.</p>
+                                    <a href="#" class="btn btn-sm btn-primary">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="card card-alumni mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://ifatca.org/wp-content/uploads/2023-conference/ifatc62-asp-group-1024x681.webp"
+                                    class="img-fluid rounded-start h-100" alt="Event 4">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Regional Meetups</h5>
+                                    <p class="card-text"><small class="text-muted"><i
+                                                class="far fa-calendar-alt me-2"></i>Various Dates</small></p>
+                                    <p class="card-text">Connect with alumni in your area through our regional chapter
+                                        events worldwide.</p>
+                                    <a href="#" class="btn btn-sm btn-primary">Find Your Chapter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Give Back Opportunities Section -->
+    <section class="pagePadding" style="background-color: #fdffeb;">
+        <div class="container-lg">
+            <h2 class="section-title animate__animated animate__fadeIn">Give Back Opportunities</h2>
+            <div class="row">
+                <div class="col-lg-4 animate__animated animate__fadeInUp animate-delay-1">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="feature-title">Mentorship Program</h3>
+                        <p>Share your expertise and guide current students or recent graduates as they navigate their
+                            careers.</p>
+                        <!-- <a href="#" class="btn btn-primary">Become a Mentor</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 animate__animated animate__fadeInUp animate-delay-2">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-title">Scholarship Fund</h3>
+                        <p>Contribute to scholarships that help deserving students access quality education regardless
+                            of financial circumstances.</p>
+                        <!-- <a href="#" class="btn btn-primary">Donate Now</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 animate__animated animate__fadeInUp animate-delay-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="feature-title">Guest Lectures</h3>
+                        <p>Return to campus as a guest speaker and share your professional insights with current
+                            students.</p>
+                        <!-- <a href="#" class="btn btn-primary">Express Interest</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row gy-4 text-md-start">
+
+                <!-- About -->
+                <div class="col-md-4">
+                    <h2 class="fw-bold mb-3">T R I N E T R A</h2>
+                    <p class="">
+                        St. Antony Degree College is dedicated to academic excellence, character building, and holistic
+                        development. We prepare students for a successful and responsible future.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="admissions.html" class="text-white text-decoration-none">Admissions</a></li>
+                        <li><a href="Academics.html" class="text-white text-decoration-none">Academics</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Upcoming Events</h5>
+                    <ul class="list-unstyled ">
+                        <li>📅 Career Day – June 12</li>
+                        <li>🎓 Convocation – July 20</li>
+                        <li>🏆 Annual Sports – August 15</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <p class=" mb-1"><i class="bi bi-geo-alt-fill me-2"></i>6-297/1/2, Opp Super Theater, RCI Road,
+                        Balapur X Road, Hyderabad - 500097, Telangana, India.</p>
+
+                    <p class=" mb-1"><i class="bi bi-envelope-fill me-2"></i>info@stantonycollege.edu</p>
+                    <p class="mb-0">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        <a href="tel:+91891947562" class="text-decoration-none text-reset">+91-891947562</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center border-top border-secondary mt-4 pt-3 ">
+                © 2025 St. Antony Degree College. All rights reserved. | Designed by
+                <a href="https://snaptics.agency/" target="_blank"
+                    class="text-warning text-decoration-none">Snaptics</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Custom JS -->
+    <script>
+        // Back to top button
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').addClass('active');
+                } else {
+                    $('.back-to-top').removeClass('active');
+                }
+            });
+
+            $('.back-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+
+            // Smooth scrolling for anchor links
+            $('a[href*="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top - 70,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+
+            // Animation on scroll
+            function animateOnScroll() {
+                $('.animate__animated').each(function () {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+
+                    if (scroll + windowHeight > position + 100) {
+                        var animationClass = $(this).attr('class').split('animate__animated ')[1].split(' ')[0];
+                        $(this).addClass('animate__' + animationClass);
+                    }
+                });
+            }
+
+            // Run once on page load
+            animateOnScroll();
+
+            // Run on scroll
+            $(window).scroll(function () {
+                animateOnScroll();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

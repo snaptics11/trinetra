@@ -54,8 +54,8 @@
                             <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
                                 <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
                                 <li><a class="dropdown-item" href="placements.html">Placements</a></li>
-                                <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
-                                <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                                <li><a class="dropdown-item" href="research.html">Research & Innovation</a></li>
+                                <li><a class="dropdown-item" href="alumini.html">Alumni</a></li>
                             </ul>
                         </li>
 
@@ -84,8 +84,8 @@
                         <ul class="dropdown-menu" aria-labelledby="desktopPagesDropdown">
                             <li><a class="dropdown-item" href="student_life.html">Student Life</a></li>
                             <li><a class="dropdown-item" href="placements.html">Placements</a></li>
-                            <li><a class="dropdown-item" href="#research">Research & Innovation</a></li>
-                            <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                            <li><a class="dropdown-item" href="research.html">Research & Innovation</a></li>
+                            <li><a class="dropdown-item" href="alumini.html">Alumni</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -105,7 +105,7 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
                     <div class="d-flex align-items-center justify-content-center vh-100 text-white text-center banner_image"
-                        style="background: url('https://img.freepik.com/premium-photo/fondren-science-building-southern-methodist-university-dallas-texas_261932-20650.jpg?ga=GA1.1.239247019.1747732547&semt=ais_hybrid&w=740') center center / cover no-repeat;">
+                        style="background: url('https://www.timeshighereducation.com/student/sites/default/files/harvard-university-campus.jpg') center center / cover no-repeat;">
                         <div class="container">
                             <h1 class="animate__animated animate__fadeInUp">Welcome to St. Anthony Degree College</h1>
                             <p class="lead max-w-75">An inviting introduction to the college, highlighting its mission,
@@ -627,6 +627,9 @@
 
 
     <!-- Redesigned Footer -->
+      <!-- Back to Top Button -->
+   
+    <!-- Redesigned Footer -->
     <footer class="bg-dark text-white">
         <div class="container">
             <div class="row gy-4 text-md-start">
@@ -750,6 +753,58 @@
             $('#testimonial4').carousel({
                 interval: 5000,
                 ride: 'carousel'
+            });
+        });
+    </script>
+    <script>
+        // Back to top button
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').addClass('active');
+                } else {
+                    $('.back-to-top').removeClass('active');
+                }
+            });
+            
+            $('.back-to-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+            
+            // Smooth scrolling for anchor links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top - 70,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+            
+            // Animation on scroll
+            function animateOnScroll() {
+                $('.animate__animated').each(function() {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (scroll + windowHeight > position + 100) {
+                        var animationClass = $(this).attr('class').split('animate__animated ')[1].split(' ')[0];
+                        $(this).addClass('animate__' + animationClass);
+                    }
+                });
+            }
+            
+            // Run once on page load
+            animateOnScroll();
+            
+            // Run on scroll
+            $(window).scroll(function() {
+                animateOnScroll();
             });
         });
     </script>
