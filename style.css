@@ -458,8 +458,9 @@ footer .fs-5 {
 
 @media screen and (max-width:768px) {
     footer {
-    padding: 60px 0 30px 0;
-}
+        padding: 60px 0 30px 0;
+    }
+
     .pagePadding {
         padding-block: 40px !important;
     }
